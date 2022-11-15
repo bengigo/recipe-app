@@ -1,0 +1,30 @@
+/* final deceisons about font-family, font-style, and spacings will be made as group */
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 20px 35px;
+  width: calc(100vw - 70px);
+  height: 70px;
+}
+
+#logo {
+  font-size: 35px;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#menu li {
+  margin: 0 10px;
+  font-size: 20px;
+}
