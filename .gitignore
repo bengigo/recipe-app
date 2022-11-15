@@ -29,3 +29,12 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#ignore node modules
+node_modules/
+
+#ignore MacOs default files
+.DS_Store
+
+#ignore vscode files
+.vscode
