@@ -3,13 +3,17 @@
 <%# logo of the recipe app %>
 <div id="logo"><a class="nav-link" href="#">Recipe <br> App</a></div>
 <ul id="menu">
-<a class="nav-link" href="#"><li> Food List</li></a>
+<%# if user logged in %>
+<%# <a class="nav-link" href="#"><li> Food List</li></a>
 <a class="nav-link" href="#"><li>My Recipes</li></a>
 <a class="nav-link" href="#"><li>Public Recipes</li></a>
 <a class="nav-link" href="#"><li>Shopping List</li></a>
 <a class="nav-link" href="#"><li>Add Food</li></a>
 <a class="nav-link" href="#"><li>Add Recipe</li></a>
-<a class="nav-link" href="#"><li>Log out</li></a>
-
+<a class="nav-link" href="#"><li>Log out</li></a> %>
+<%# else %>
+<a class="nav-link" href="#"><li>Public Recipes</li></a>
+<a class="nav-link" href="#"><li>Login</li></a>
+<a class="nav-link" href="#"><li>Sign up</li></a>
 </ul>
 </nav>
