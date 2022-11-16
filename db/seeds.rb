@@ -11,18 +11,17 @@
 puts "Seeding..."
 
 # delete recipe foods
-
-
+RecipeFood.destroy_all
 # delete foods
-
+Food.destroy_all
 # delete recipes
-
+Recipe.destroy_all
 # delete users
-
+User.destroy_all
 
 
 # seed users
-
+first_user = User.create(email: 'b@mail.com', name: 'Bengi')
 # seed recipes
 
 # seed foods
@@ -30,3 +29,4 @@ puts "Seeding..."
 # seed recipe foods
 
 
+puts "Seeding done"
