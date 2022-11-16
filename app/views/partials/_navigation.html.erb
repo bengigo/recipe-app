@@ -9,7 +9,7 @@
       <li><%= link_to "Shopping List", "#" %></li>
       <li><%= link_to "Add food", "#" %></li>
       <li><%= link_to "Add Recipe", "#" %></li>
-      <li><%= link_to "Log out", "#" %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete,class:"decoration" %></li>
     <% else %>
       <li><%= link_to "Public Recipes", "#" %></li>
       <li><%= link_to "Login", "#" %></li>
