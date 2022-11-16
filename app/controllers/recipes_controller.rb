@@ -1,32 +1,29 @@
-class RecipeController < ApplicationController
+class RecipesController < ApplicationController
   def index
-    # what should index do?
     # should list public recipes
     @user = current_user
     @recipes = @user.recipes.includes(:user).order(created_at: :desc)
   end
 
   def show
-    # what should show do?
     # should show the details (foods) of the recipe
+    @recipe = Recipe.find(params[:id])
     @recipe_foods = @recipe.recipe_foods
   end
 
   def new
-    # what should new do?
     @recipe = Recipe.new
   end
 
   def create
-    # what should create do?
     @recipe = Recipe.new(recipe_params)
     @user = User.find(params[:user_id])
     respond_to do |format|
       format.html do
         if @post.save
-          redirect_to user_recipes_path(user_id: @recipe.user.id). notice: 'Recipe added ✅'
+          redirect_to user_recipes_path(@recipe), notice: 'Recipe added ✅'
         else
-          notice: 'Recipe is not created ❌'
+          render :new, notice: 'Recipe is not created ❌'
         end
       end
     end
@@ -41,12 +38,12 @@ class RecipeController < ApplicationController
     @recipe.destroy
     respond_to do |format|
       format.html do
-        redirect_to user_recipes_path(user_id: @recipe.user.id). notice: 'Recipe deleted ✅'
+        redirect_to user_recipes_path(@recipe), notice: 'Recipe deleted ✅'
       end
     end
   end
 
-  privete
+  private
 
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
