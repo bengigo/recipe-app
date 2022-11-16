@@ -54,11 +54,10 @@
   height: 100%;
 }
 
-
-
-
-
-
-
-
-
+.login-alert {
+  color: #fff;
+  background-color: #df7676;
+  padding: 10px;
+  border-radius: 9px;
+  margin-bottom: 26px;
+}
