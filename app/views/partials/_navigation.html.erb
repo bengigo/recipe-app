@@ -1,19 +1,19 @@
-
 <nav>
 <%# logo of the recipe app %>
 <div id="logo"><a class="nav-link" href="#">Recipe <br> App</a></div>
 <ul id="menu">
-<%# if user logged in %>
-<%# <a class="nav-link" href="#"><li> Food List</li></a>
-<a class="nav-link" href="#"><li>My Recipes</li></a>
-<a class="nav-link" href="#"><li>Public Recipes</li></a>
-<a class="nav-link" href="#"><li>Shopping List</li></a>
-<a class="nav-link" href="#"><li>Add Food</li></a>
-<a class="nav-link" href="#"><li>Add Recipe</li></a>
-<a class="nav-link" href="#"><li>Log out</li></a> %>
-<%# else %>
-<a class="nav-link" href="#"><li>Public Recipes</li></a>
-<a class="nav-link" href="#"><li>Login</li></a>
-<a class="nav-link" href="/users/sign_up"><li>Sign up</li></a>
+<% if user_signed_in? %>
+      <li><%= link_to "Food List", "#" %></li>
+      <li><%= link_to "My Recipes", "#"%></li>
+      <li><%= link_to "Public Recipes", "#" %></li>
+      <li><%= link_to "Shopping List", "#" %></li>
+      <li><%= link_to "Add food", "#" %></li>
+      <li><%= link_to "Add Recipe", "#" %></li>
+      <li><%= link_to "Log out", "#" %></li>
+    <% else %>
+      <li><%= link_to "Public Recipes", "#" %></li>
+      <li><%= link_to "Login", "#" %></li>
+      <li><%= link_to  "Sign up", "#" %></li>
+    <% end %>
 </ul>
 </nav>
