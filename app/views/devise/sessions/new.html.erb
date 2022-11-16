@@ -1,28 +1,19 @@
+<%= stylesheet_link_tag "login"%>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>RecipeApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-   <%= stylesheet_link_tag "login"%>
-    
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body class='uniq'>
-   <div class='login-content'>
+<div class='uniq'>
+<div class='login-content'>
 
 <div class='login-form'>
-<h2>Welcome</h2>
+<h2 class='login-title'>Welcome</h2>
+      <%= notice %>
+       <%= alert %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autocomplete: "email" , class: 'data-info' , placeholder: 'Enter Your Email'%>
   </div>
-
+  
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" , class: 'data-info'  , placeholder: 'Enter Your Password'%>
@@ -40,12 +31,13 @@
   </div>
 <%end%>
 
-<%= render "devise/shared/links" %>
 
 
+<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+ <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
 </div>
 </div>
-</body>
-</html>
+</div>
+
 
 
