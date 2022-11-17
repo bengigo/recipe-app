@@ -1,9 +1,10 @@
 <%= stylesheet_link_tag "food"%>
 <%= render 'partials/navigation' %>
 <h1>Food page</h1>
-
-
-<%= button_to 'Add New Food' , new_food_path  , method: :get %>
+<% if notice%>
+<div class='success-alert'><%= notice%></div>
+<%end%>
+<%= button_to 'Add New Food' , new_user_food_path  , method: :get %>
 
 <section class='foods-list'>
 <% @foods.each do |food| %>

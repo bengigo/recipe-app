@@ -3,7 +3,7 @@
 <%# logo of the recipe app %>
 <div id="logo"><a class="nav-link" href="#">Recipe <br> App</a></div>
 <ul id="menu">
-<li><%= link_to 'Food List' , foods_path%></li>
+<li><%= link_to 'Food List' , user_foods_path(current_user.id)%></li>
 
 <a class="nav-link" href="#"><li>My Recipes</li></a>
 <a class="nav-link" href="#"><li>Public Recipes</li></a>
