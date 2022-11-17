@@ -12,7 +12,7 @@
       
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <% else %>
-      <li><%= link_to "Login", "#" %></li>
+      <li><%= link_to "Login", "users/sign_in" %></li>
       <li><%= link_to  "Sign up", "/users/sign_up" %></li>
     <% end %>
 </ul>
