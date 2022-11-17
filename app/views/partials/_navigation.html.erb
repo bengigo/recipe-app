@@ -1,16 +1,21 @@
-
 <nav>
 <%# logo of the recipe app %>
 <div id="logo"><a class="nav-link" href="#">Recipe <br> App</a></div>
 <ul id="menu">
-<li><%= link_to 'Food List' , user_foods_path(current_user.id)%></li>
 
-<a class="nav-link" href="#"><li>My Recipes</li></a>
-<a class="nav-link" href="#"><li>Public Recipes</li></a>
-<a class="nav-link" href="#"><li>Shopping List</li></a>
-<a class="nav-link" href="#"><li>Add Food</li></a>
-<a class="nav-link" href="#"><li>Add Recipe</li></a>
-<a class="nav-link" href="#"><li>Log out</li></a>
+<% if user_signed_in? %>
+      <li><%= link_to 'Food List' , user_foods_path(current_user.id)%></li>
+      <li><%= link_to "My Recipes", "#"%></li>
+      <li><%= link_to "Public Recipes", "#" %></li>
+      <li><%= link_to "Shopping List", "#" %></li>
+      <li><%= link_to "Add food", "#" %></li>
+      <li><%= link_to "Add Recipe", "#" %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete,class:"decoration" %></li>
+    <% else %>
+      <li><%= link_to "Public Recipes", "#" %></li>
+      <li><%= link_to "Login", "#" %></li>
+      <li><%= link_to  "Sign up", "/users/sign_up" %></li>
+    <% end %>
 
 </ul>
 </nav>
