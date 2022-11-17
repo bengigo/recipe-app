@@ -1,5 +1,21 @@
 <%= render 'partials/navigation' %>
 
-<h1>Hello visitor. <br>
-List of public recipes here</h1>
+<h1>My Recipes</h1>
 
+  <% if @recipes.empty? %>
+    <p>Hungry people are waiting for your delicious recipies!</p>
+  <% end %>
+
+  <% @recipes.each do |recipe| %>
+  <section id="my-recipes">
+    <div class="recipe-card">
+    <div class="recipe-intro">
+    <h2><%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %></h2>
+    <if can? :manage, recipe %>
+    <%= button_to "Delete recipe", user_recipe_path(recipe.user, recipe.id), method: :delete %>
+    </div>
+    <p class="description"><%= recipe.description %></p>
+
+    <% end %>
+
+  </section>

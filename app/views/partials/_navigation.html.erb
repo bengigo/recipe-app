@@ -8,7 +8,7 @@
       <li><%= link_to "Public Recipes", "#" %></li>
       <li><%= link_to "Shopping List", "#" %></li>
       <li><%= link_to "Add food", "#" %></li>
-      <li><%= link_to "Add Recipe", "#" %></li>
+      <li><%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id) %></li>
       
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <% else %>

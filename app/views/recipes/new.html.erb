@@ -1,24 +1,5 @@
 <h1>Add a recipe</h1>
 
-<%= form_with model: @recipe, url: user_recipes_path do |form| %>
-<div>
-  <%= form.label :name %> <br>
-  <%= form.text_area :name %> <br>
-  <%= form.label :preparation_time %> <br>
-  <%= form.text_area :preparation_time%> <br>
-  <%= form.label :cooking_time %> <br>
-  <%= form.text_area :cooking_time %> <br>
-  <%= form.label :description %> <br>
-  <%= form.text_area :description %> <br>
-  <%= form.label :public %> <br>
-
-  <%= form.check_box :public %> <br>
-
-  <%= form.submit %>
-</div>
-<% end %>
-
-
 <%= form_with(url:  user_recipes_path, model: @recipe) do |form| %>
   <% if @recipe.errors.any? %>
     <div style="color: red">
