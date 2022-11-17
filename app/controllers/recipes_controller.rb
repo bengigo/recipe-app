@@ -38,7 +38,9 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
+    if current_user == @recipe.user
     @recipe.destroy
+    end
     respond_to do |format|
       format.html do
         redirect_to user_recipes_path(@recipe), notice: 'Recipe deleted ✅'
