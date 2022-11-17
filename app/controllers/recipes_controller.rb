@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   def index
     # should list public recipes
     @user = current_user
-    @recipes = @user.recipes.includes(:user).order(created_at: :desc)
+    # @recipes = @user.recipes.includes(:user).order(created_at: :desc)
   end
 
   def show

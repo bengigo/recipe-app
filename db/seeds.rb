@@ -21,12 +21,16 @@ User.destroy_all
 
 
 # seed users
-first_user = User.create(email: 'b@mail.com', name: 'Bengi')
+# first_user = User.create(email: 'b@mail.com', name: 'Bengi')
+# no need
 # seed recipes
+# no need
 
 # seed foods
+# no need
 
 # seed recipe foods
+# no need
 
 
 puts "Seeding done"
