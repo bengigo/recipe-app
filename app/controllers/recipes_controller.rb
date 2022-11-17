@@ -17,10 +17,11 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @user = User.find(params[:user_id])
+    @recipe.user_id = params[:user_id]
+    # @user = User.find(params[:user_id])
     respond_to do |format|
       format.html do
-        if @post.save
+        if @recipe.save
           redirect_to user_recipes_path(@recipe), notice: 'Recipe added ✅'
         else
           render :new, notice: 'Recipe is not created ❌'
