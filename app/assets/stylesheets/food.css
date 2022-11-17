@@ -1,0 +1,43 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  width: 75%;
+  border-radius: 11px;
+  background: #ea2d29;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+.foods-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 89%;
+  row-gap: 27px;
+  column-gap: 0;
+  margin: 2% 0 0 6%;
+}
+
+button {
+  float: right;
+  background-color: #ea2d29;
+  border: aliceblue;
+  padding: 15px;
+  border-radius: 7px;
+  color: #fff;
+  margin-right: 60px;
+  margin-bottom: 21px;
+  cursor: pointer;
+}

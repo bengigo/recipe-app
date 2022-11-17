@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Login Page</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= javascript_include_tag "application"%>
-    <%= stylesheet_link_tag "login"%>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+ <%= stylesheet_link_tag "login"%>
 
-<body class='uniq'>
+<section class='uniq'>
   <div class='login-content'>
   
     <div class='login-form'>
@@ -47,9 +37,7 @@
     <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
       </div>
   </div>
-</body>
+</section>
 
-
-</html>
 
 
