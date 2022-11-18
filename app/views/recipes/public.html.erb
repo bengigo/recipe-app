@@ -1,5 +1,24 @@
 <%= render 'partials/navigation' %>
 
+<h1>PUBLIC RECIPES</h1>
+<section class='recipes-list'>
+<% @public_recipes.each do |item| %>
+  <div class="card">
+  <%= image_tag "logo.png"%>
+  <div class="container">
+    <h4><b><%= item.name%></b></h4> 
+    <p><b>Preparation time:</b>  <%= item.preparation_time%></p> 
+    <p><b>cooking time:</b>  <%= item.cooking_time%></p> 
+  </div>
+  <%= button_to 'Details' %>
+</div>
+<% end %>
+</section>
+</div>
 
-<h1>PUBLIC RECIPES public recipes PUBLIC RECIPES</h1>
 
+
+
+
+
+ 

@@ -4,15 +4,16 @@
 <ul id="menu">
 
 <% if user_signed_in? %>
+
       <li><%= link_to 'Food List' , user_foods_path(current_user.id)%></li>
-      <li><%= link_to "My Recipes", "#"%></li>
-      <li><%= link_to "Public Recipes", "#" %></li>
+      <li><%= link_to "My Recipes", "/recipes/index" %></li>
+      <li><%= link_to "Public Recipes", "/recipes/public" %></li>
       <li><%= link_to "Shopping List", "#" %></li>
       <li><%= link_to "Add food", "#" %></li>
-      <li><%= link_to "Add Recipe", "#" %></li>
-      <li><%= link_to "Log out", destroy_user_session_path, method: :delete,class:"decoration" %></li>
+      <li><%= link_to "Add Recipe", new_user_recipe_path(user_id: current_user.id) %></li>
+      
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <% else %>
-      <li><%= link_to "Public Recipes", "#" %></li>
       <li><%= link_to "Login", "#" %></li>
       <li><%= link_to  "Sign up", "/users/sign_up" %></li>
     <% end %>

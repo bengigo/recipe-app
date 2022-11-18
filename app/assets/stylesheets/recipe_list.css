@@ -3,7 +3,7 @@
   transition: 0.3s;
   width: 48%;
   border-radius: 11px;
-  background: #ea2d29;
+  background: #ffb400;
 }
 
 .card:hover {
@@ -21,7 +21,7 @@ h4 {
   margin-bottom: 11px;
 }
 
-.foods-list {
+.recipes-list {
   display: grid;
   grid-template-columns: auto auto auto auto;
   width: 89%;
@@ -30,16 +30,17 @@ h4 {
   margin: 2% 0 0 6%;
 }
 
-.food-container button {
+.recipe-container button {
   float: right;
   background-color: #ea2d29;
   border: aliceblue;
-  padding: 15px;
+  padding: 9px;
   border-radius: 7px;
   color: #fff;
-  margin-right: 60px;
-  margin-bottom: 21px;
+  margin-right: 74px;
+  margin-bottom: 9px;
   cursor: pointer;
+  box-shadow: 2px 1px #c55f5c;
 }
 
 .form-content {
