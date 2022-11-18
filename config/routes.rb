@@ -6,13 +6,16 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+
   root "recipes#public"
+  resources :foods, except: :update
   resources :users do
     resources :recipes, except: :update do
       resources :recipe_foods
     end
+
   end
-  resources :foods, except: :update
+  
 
   get "/general_shopping_list", to: "general_shopping_list#index"
 
