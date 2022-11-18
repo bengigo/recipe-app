@@ -18,8 +18,6 @@ Rails.application.routes.draw do
 
   end
   
-
   get "/general_shopping_list", to: "general_shopping_list#index"
-
 end
 
