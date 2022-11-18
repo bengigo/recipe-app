@@ -1,0 +1,46 @@
+.foods-list{
+    margin-top: 66px;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 71%;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+th {
+  background-color: #d32e2eb5;
+  color: #fff;
+}
+
+table button {
+    background-color: #ef1f1f;
+    padding: 5px;
+    border: aliceblue;
+    color: #fff;
+    border-radius: 10px;
+    width: 64px;
+}
+
+.new-food{
+    float: right;
+    background-color: #f12929;
+    border: aliceblue;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 47px;
+    margin-top: 32px;
+}

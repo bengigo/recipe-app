@@ -8,6 +8,12 @@ class FoodsController < ApplicationController
     @food = Food.new
    end
 
+   def show
+    # should show the details (foods) of the recipe
+    @food = Food.find(params[:id])
+   
+  end
+
    def create
     @food=Food.new(food_params)
     @food.user_id = params[:user_id]
@@ -23,6 +29,18 @@ class FoodsController < ApplicationController
     end
    def food_params
         params.require(:food).permit(:name , :measurement_unit , :price ,:quantity)
+   end
+
+   def destroy
+    @food=Food.find(params[:id])
+    if current_user == @food.user
+        @food.destroy
+    end
+    respond_to do |format|
+        format.html do
+            redirect_to user_foods_path(@food) , notice: 'Food deleted ✅'
+        end
+    end
    end
 
 
