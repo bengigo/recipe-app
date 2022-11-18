@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   end
 
   root "recipes#public"
-  resources :foods, except: :update
+  
   resources :users do
+    resources :foods, except: :update
     resources :recipes, except: :update do
       resources :recipe_foods
     end
