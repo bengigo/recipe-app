@@ -1,21 +1,21 @@
 
 <%= render 'partials/navigation' %>
-
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
 <h1>PUBLIC RECIPES</h1>
-<section class='recipes-list'>
-<% @public_recipes.each do |item| %>
+
+<section class='recip-list'>
+<% @public_recipes.each do |recipe| %>
   <div class="card">
  
   <div class="container">
-    <h4><b><%= item.name%></b></h4> 
-    <p><b>Preparation time:</b> <%= item.preparation_time%></p> 
-    <p><b>cooking time:</b>  <%= item.cooking_time%></p> 
+    <h1><b><%= recipe.name%></b></h1> 
+    <p><b>By:</b> <%= recipe.user.name%></p> 
+    <p><b>cooking time:</b><%= recipe.cooking_time%></p> 
   </div>
-  <%= button_to 'Details' , "/recipes/show/#{item.id}", method: :post%>
+  <%= button_to 'Details' , "/recipes/show/#{recipe.id}", method: :post%>
 </div>
 <% end %>
 </section>
-</div>
 
 
 
