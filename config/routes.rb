@@ -7,12 +7,15 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  root "recipes#public"
+  # Defines the root path route ("/")
+  # root "articles#index"
+  
+  root 'pages#index'
 
+  resources :users do 
+     resources :foods
+     resources :recipes
 
-
-  resources :users do
-    resources :recipes
   end
 
 end
