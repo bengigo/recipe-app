@@ -4,7 +4,8 @@ RSpec.describe 'Recipes', type: :system do
   include Devise::Test::IntegrationHelpers
   before do
     @user = User.create(email: 'user@mail.com', password: '123456')
-    @recipe = @user.recipes.create(name: 'Recipe 1', preparation_time: '30', cooking_time: '30', description: 'This is description', public: 'true')
+    @recipe = @user.recipes.create(name: 'Recipe 1', preparation_time: '30', cooking_time: '30',
+                                   description: 'This is description', public: 'true')
     sign_in @user
   end
 
