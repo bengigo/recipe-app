@@ -57,6 +57,7 @@
       <% if can? :manage, @recipe %>
       <%= button_to "Delete" , user_recipe_path(current_user, @recipe), method: :destroy %>
       <% end %>
+
       </td>
       </tr>
   <% end %>

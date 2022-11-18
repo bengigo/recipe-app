@@ -1,14 +1,9 @@
 class RecipesController < ApplicationController
-  # load_and_authorize_resource
-
   def index
-    # @user = current_user
-    # @recipes = current_user.recipes.includes(:user).order(created_at: :desc)
     @recipes = Recipe.all.includes([:user])
   end
 
   def show
-    # should show the details (foods) of the recipe
     @recipe = Recipe.find(params[:id])
     @recipe_foods = @recipe.recipe_foods
   end
@@ -20,7 +15,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = params[:user_id]
-    # @user = User.find(params[:user_id])
     respond_to do |format|
       format.html do
         if @recipe.save
@@ -38,9 +32,7 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:id])
-    if current_user == @recipe.user
     @recipe.destroy
-    end
     respond_to do |format|
       format.html do
         redirect_to user_recipes_path(@recipe), notice: 'Recipe deleted ✅'
