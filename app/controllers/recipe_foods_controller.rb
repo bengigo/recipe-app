@@ -17,10 +17,10 @@ class RecipeFoodsController < ApplicationController
     else
       render :new
     end
+
   end
 
   def recipe_food_params
     params.require(:recipe_food).permit(:quantity, :food_id)
   end
-
 end

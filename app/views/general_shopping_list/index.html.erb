@@ -1,0 +1,20 @@
+<%= render 'partials/navigation' %>
+<h1>Shooping list</h1>
+
+
+<h3>Amount:<%= @foods.length%></h3>
+
+<% @foods.each do |food| %>
+    <h3><%= food.name%></h3>
+    <h3><%= food.quantity%></h3>
+    <h3>Total: $<%= food.price * food.quantity%></h3>
+<% end %>
+
+
+
+
+
+
+
+
+
