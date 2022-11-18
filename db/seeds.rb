@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# users - recipes - recipe foods - foods
+
+puts "Seeding..."
+
+# delete recipe foods
+RecipeFood.destroy_all
+# delete foods
+Food.destroy_all
+# delete recipes
+Recipe.destroy_all
+# delete users
+User.destroy_all
+
+
+# seed users
+# first_user = User.create(email: 'b@mail.com', name: 'Bengi')
+# no need
+# seed recipes
+# no need
+
+# seed foods
+# no need
+
+# seed recipe foods
+# no need
+
+
+puts "Seeding done"
