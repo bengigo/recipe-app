@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "food"%>
+
 <%= render 'partials/navigation' %>
 
 <section class='form-content'>
@@ -6,7 +6,7 @@
 
 <div class='food-form'>
 <%=  form_with model: @food, url: user_foods_path, method: :post, local: true, class: "form-control" do |f| %>
-    <%= image_tag "form-logo.png"%>
+    
     <h2>New Food</h2>
   <div class="form-field">
     <%= f.label :Name %><br />

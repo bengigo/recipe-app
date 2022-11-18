@@ -1,15 +1,13 @@
-<%= stylesheet_link_tag "food"%>
+
 <%= render 'partials/navigation' %>
 <h1>Food page</h1>
-<% if notice%>
-<div class='success-alert'><%= notice%></div>
-<%end%>
+
 <%= button_to 'Add New Food' , new_user_food_path  , method: :get %>
 
 <section class='foods-list'>
 <% @foods.each do |food| %>
   <div class="card">
-  <%= image_tag "logo.png"%>
+ 
   <div class="container">
     <h4><b><%= food.name%></b></h4> 
     <p><b>Price:</b> <%= food.price%></p> 
