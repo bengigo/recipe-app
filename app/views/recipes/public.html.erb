@@ -1,11 +1,11 @@
-<%= stylesheet_link_tag "public_recipe_list"%>
+
 <%= render 'partials/navigation' %>
 
 <h1>PUBLIC RECIPES</h1>
 <section class='recipes-list'>
 <% @public_recipes.each do |item| %>
   <div class="card">
-  <%= image_tag "logo.png"%>
+ 
   <div class="container">
     <h4><b><%= item.name%></b></h4> 
     <p><b>Preparation time:</b> <%= item.preparation_time%></p> 
