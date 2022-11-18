@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :recipes
   has_many :foods , foreign_key: 'user_id'
 
+  def admin?
+    true
+  end
 end
