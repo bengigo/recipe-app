@@ -12,7 +12,11 @@ class RecipeFoodsController < ApplicationController
   def create
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
-    @recipe_food.save
+    if @recipe_food.save
+      redirect_to user_recipe_path(current_user, @recipe)
+    else
+      render :new
+    end
   end
 
   def recipe_food_params
