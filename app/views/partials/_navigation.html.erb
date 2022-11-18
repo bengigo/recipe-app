@@ -3,7 +3,9 @@
 <div id="logo"><a class="nav-link" href="#">Recipe <br> App</a></div>
 <ul id="menu">
 <% if user_signed_in? %>
-      <li><%= link_to "Food List", "#" %></li>
+
+
+      <li><%= link_to 'Food List' , user_foods_path(current_user.id)%></li>
       <li><%= link_to "My Recipes", "/recipes/index" %></li>
       <li><%= link_to "Public Recipes", "/recipes/public" %></li>
       <li><%= link_to "Shopping List", "/general_shopping_list" %></li>
