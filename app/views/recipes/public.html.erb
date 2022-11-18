@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "public_recipe_list"%>
 <%= render 'partials/navigation' %>
 
 <h1>PUBLIC RECIPES</h1>
@@ -7,10 +8,10 @@
   <%= image_tag "logo.png"%>
   <div class="container">
     <h4><b><%= item.name%></b></h4> 
-    <p><b>Preparation time:</b>  <%= item.preparation_time%></p> 
+    <p><b>Preparation time:</b> <%= item.preparation_time%></p> 
     <p><b>cooking time:</b>  <%= item.cooking_time%></p> 
   </div>
-  <%= button_to 'Details' %>
+  <%= button_to 'Details' , "/recipes/show/#{item.id}", method: :post%>
 </div>
 <% end %>
 </section>

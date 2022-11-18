@@ -1,1 +1,20 @@
-<h1>welcome to <%= @recipe.name%> recipe detail page</>
+<%= stylesheet_link_tag "public_recipe_list"%>
+<%= render 'partials/navigation' %>
+
+<section class='detail-card'>
+<h1><%= @recipe.name%></h1>
+<div class='detail'>
+    <ul class='recipe-details'>
+    <li>
+        <p><b>Preparation Time: </b><%= @recipe.preparation_time%></p>
+    <li>
+    <li>
+        <p><b>Cooking Time: </b><%= @recipe.cooking_time%></p>
+    <li>
+    <li>
+        <p><b>Description: </b><%= @recipe.description%></p>
+    <li>
+    </ul>
+<div>
+
+</section>
