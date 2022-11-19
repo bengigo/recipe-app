@@ -17,18 +17,19 @@
   justify-content: space-around;
 }
 
-/* .container button {
-  background-color: #7aa036;
-  border: aliceblue;
-  padding: 5px;
-  color: #fff;
-  border-radius: 3px;
-  margin-top: 9px;
-} */
-
 #title {
   text-align: center;
     margin: 37px;
+}
+
+.signin-alert{
+  background-color: #58e71db3;
+    width: 206px;
+    padding: 9px;
+    border-radius: 6px;
+    color: #0a5409;
+    margin-top: 13px;
+    margin-left: 44px;
 }
 
   

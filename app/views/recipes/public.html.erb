@@ -1,8 +1,12 @@
 
 <%= render 'partials/navigation' %>
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
-<h1 id='title'>PUBLIC RECIPES</h1>
 
+
+<% if notice%>
+  <h4 class='signin-alert'><%= notice%></h4>
+<%end%>
+<h1 id='title'>PUBLIC RECIPES</h1>
 <section class='recip-list'>
 <% @public_recipes.each do |recipe| %>
   <div class="card">
