@@ -6,9 +6,10 @@
     <p id="no-recipe">Hungry people are waiting for your delicious recipies! <br>...</p>
   <% end %>
 
-  <% @recipes.each do |recipe| %>
+  
   <section id="my-recipes">
   <h1>MY RECIPES</h1>
+   <% @recipes.each do |recipe| %>
     <div class="card-container">
       <div class="recipe-card">
         <div class="recipe-intro">
@@ -18,5 +19,6 @@
         </div>
         <p class="description"><%= recipe.description %></p>
       </div>
+    </div>
     <% end %>
   </section>
