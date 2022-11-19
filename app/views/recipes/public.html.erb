@@ -13,7 +13,9 @@
  
   <div class="container">
     <section>
-      <h1><b><%= recipe.name%></b></h1> 
+      <h1><b>
+        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+      </b></h1> 
     </section>
 
     <section>
