@@ -1,5 +1,5 @@
-.foods-list{
-    margin-top: 66px;
+.foods-list {
+  margin-top: 66px;
 }
 
 table,
@@ -26,23 +26,23 @@ th {
 }
 
 table button {
-    background-color: #5c7c23;
-    padding: 5px;
-    border: aliceblue;
-    color: #fff;
-    border-radius: 10px;
-    width: 64px;
+  background-color: #5c7c23;
+  padding: 5px;
+  border: aliceblue;
+  color: #fff;
+  border-radius: 10px;
+  width: 64px;
 }
 
-.new-food{
-    float: right;
-    background-color: #5c7c23;
-    border: aliceblue;
-    color: #fff;
-    padding: 17px;
-    border-radius: 10px;
-    margin-right: 47px;
-    margin-top: 32px;
+.new-food {
+  float: right;
+  background-color: #5c7c23;
+  border: aliceblue;
+  color: #fff;
+  padding: 17px;
+  border-radius: 10px;
+  margin-right: 47px;
+  margin-top: 32px;
 }
 
 .form-content {
@@ -71,16 +71,16 @@ table button {
 
 .food-form h2 {
   text-align: center;
-    color: #6ba307;
-    margin-bottom: 18px;
+  color: #6ba307;
+  margin-bottom: 18px;
 }
 
 .actions input {
-    background-color: #7aa036;
-    width: 74px;
-    color: #fff;
-    border-radius: 3px;
-    padding: 10px;
+  background-color: #7aa036;
+  width: 74px;
+  color: #fff;
+  border-radius: 3px;
+  padding: 10px;
 }
 
 .form-field {

@@ -17,6 +17,12 @@ nav {
   color: #fff;
 }
 
+li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+}
+
 #logo a {
   color: #fff;
 }
@@ -28,14 +34,6 @@ nav {
   list-style: none;
   width: 100%;
   margin-right: 54px;
-
-}
-
-li a {
-  text-decoration: none;
-  text-decoration: none;
-    color: #fff;
-    font-size: 19px;
 }
 
 #menu li {

@@ -1,16 +1,16 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgb(122 160 54 / 87%);
-    transition: 0.3s;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 38px;
-    padding: 33px;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  box-shadow: 0 4px 8px 0 rgb(122 160 54 / 87%);
+  transition: 0.3s;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 38px;
+  padding: 33px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
 .container {
   display: flex;
@@ -19,24 +19,25 @@
 
 #title {
   text-align: center;
-    margin: 37px;
+  margin: 37px;
 }
 
-.signin-alert{
+.signin-alert {
   background-color: #58e71db3;
-    width: 206px;
-    padding: 9px;
-    border-radius: 6px;
-    color: #0a5409;
-    margin-top: 13px;
-    margin-left: 44px;
+  width: 206px;
+  padding: 9px;
+  border-radius: 6px;
+  color: #0a5409;
+  margin-top: 13px;
+  margin-left: 44px;
 }
 
-.container h1 , p {
+.container h1,
+p {
   margin-bottom: 10px;
 }
 
 .container h1 {
   font-size: xx-large;
-    color: #669710;
+  color: #669710;
 }
