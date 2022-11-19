@@ -2,7 +2,7 @@ class RecipeFoodsController < ApplicationController
   before_action :set_recipe_food, only: %i[show edit update destroy]
 
   def index
-    @recipe_foods = RecipeFoods.all
+    @recipe_foods = RecipeFood.all
   end
 
   def new
