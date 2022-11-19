@@ -1,9 +1,7 @@
-
 <%= render 'partials/navigation' %>
 <%= stylesheet_link_tag "food"%> 
 <section class='form-content'>
     
-
 <div class='food-form'>
 <%=  form_with model: @food, url: user_foods_path, method: :post, local: true, class: "form-control" do |f| %>
 
