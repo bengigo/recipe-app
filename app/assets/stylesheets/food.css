@@ -44,3 +44,45 @@ table button {
     margin-right: 47px;
     margin-top: 32px;
 }
+
+.form-content {
+  margin-top: 54px;
+}
+
+.food-form {
+  width: 301px;
+  margin: auto;
+  padding: 29px;
+  border-radius: 9px;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 8px 0 rgb(122 160 54 / 87%);
+  background-color: #fff;
+  height: 466px;
+}
+
+.food-form input {
+  padding: 5px;
+  width: 258px;
+  border: none;
+  border-bottom: 2px solid #7aa03696;
+  margin-bottom: 18px;
+  margin-top: 6px;
+}
+
+.food-form h2 {
+  text-align: center;
+    color: #6ba307;
+    margin-bottom: 18px;
+}
+
+.actions input {
+    background-color: #7aa036;
+    width: 74px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.form-field {
+  margin-bottom: 13px;
+}

@@ -11,3 +11,24 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .container button {
+  background-color: #7aa036;
+  border: aliceblue;
+  padding: 5px;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 9px;
+} */
+
+#title {
+  text-align: center;
+    margin: 37px;
+}
+
+  

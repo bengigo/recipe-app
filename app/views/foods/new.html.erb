@@ -1,6 +1,6 @@
 
 <%= render 'partials/navigation' %>
-
+<%= stylesheet_link_tag "food"%> 
 <section class='form-content'>
     
 
@@ -9,23 +9,23 @@
 
     <h2>New Food</h2>
   <div class="form-field">
-    <%= f.label :Name %><br />
+   <b> <%= f.label :Name %></b><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" , placeholder: 'Enter Food Name..'%>
   </div>
 
 
   <div class="form-field">
-    <%= f.label :Measurement_Unit %><br />
+    <b><%= f.label :Measurement_Unit %></b><br />
     <%= f.text_field :measurement_unit, autocomplete: "measurement_unit" , placeholder: 'Enter Food Measurement Unit.. '%>
   </div>
 
   <div class="form-field">
-    <%= f.label :Price %><br />
+     <b><%= f.label :Price %></b><br />
     <%= f.number_field :price, autocomplete: "price"  , placeholder: 'Enter Food Price...'%>
   </div>
 
   <div class="form-field">
-    <%= f.label :Quantity %><br />
+     <b><%= f.label :Quantity %></b><br />
     <%= f.number_field :quantity, autocomplete: "quantity"  , placeholder: 'Enter Food Quantity...' %>
   </div>
 

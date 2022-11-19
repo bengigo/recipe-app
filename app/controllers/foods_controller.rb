@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-   def index
+       def index
     @user=current_user
     @foods=@user.foods.includes(:user)
    end
