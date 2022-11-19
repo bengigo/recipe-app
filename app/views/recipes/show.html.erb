@@ -1,15 +1,30 @@
+<%= stylesheet_link_tag "recipes_show"%>
 
 <%= render 'partials/navigation' %>
 
 <h1><%= @recipe.name%></>
 
 <section id="recipe-details">
-<div class="details-card">
-<p>Preparation time: <%=@recipe.preparation_time %> </p>
-<p>Cookin time: <%=@recipe.cooking_time %> </p>
-<p>Description: <%=@recipe.description %> </p>
-<%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
-<%= link_to "Generate Shopping List", "#"%>
+  <div class="details-container">
+    <div class="details-card">
+      <div class="info">
+      <p>Preparation time: <%=@recipe.preparation_time %> </p>
+      <p>Cookin time: <%=@recipe.cooking_time %> </p>
+      <p>Description: <%=@recipe.description %> </p>
+      </div>
+    <p class="switch-text">Public
+    <label class="switch">
+    <% if @recipe.public == true  %>
+    <input type="checkbox" checked>
+    <%end%>
+    <span class="slider round"></span>
+    </label>
+    </p>
+    </div>
+  <div class="detail-links">
+    <%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
+    <%= link_to "Generate Shopping List", "#"%>
+  </div>
 </div>
 <table class="recipe-ingredients">
 <th>
