@@ -14,12 +14,16 @@
   <div class="container">
     <section>
       <h1><b><%= recipe.name%></b></h1> 
-      <p><b>By:</b> <%= recipe.user.name %></p> 
+      <h4><b>By:</b> <%= recipe.user.name %></h4> 
     </section>
 
     <section>
-      <p><b>Total Food Item:</b></p> 
-      <p><b>Total Price:</b> </p> 
+      <p><b>Total Food Item:</b>  <%= recipe.foods.count%></p> 
+
+       <% cost = recipe.foods.map do |recipe_food| %>
+        <% recipe_food.price * recipe_food.quantity %>
+      <% end %>
+      <p><b>Total Price:</b> <%= "$#{cost.sum}" %> </p> 
       
     </section>
   </div>

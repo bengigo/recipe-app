@@ -32,4 +32,11 @@
     margin-left: 44px;
 }
 
-  
+.container h1 , p {
+  margin-bottom: 10px;
+}
+
+.container h1 {
+  font-size: xx-large;
+    color: #669710;
+}
