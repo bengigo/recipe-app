@@ -33,16 +33,16 @@ h1 {
   padding: 33px;
 }
 
-.recipe-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 .recipe-card {
   height: 117px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.recipe-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .recipe-intro {
