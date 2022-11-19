@@ -14,6 +14,7 @@
 
 .container {
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -34,7 +35,7 @@
 
 .container h1,
 p {
-  margin-bottom: 10px;
+  color: #669710;
 }
 
 .container h1 {
