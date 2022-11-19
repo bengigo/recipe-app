@@ -1,0 +1,72 @@
+<%= stylesheet_link_tag "recipes_show"%>
+<%= render 'partials/navigation' %>
+
+<h1><%= @recipe.name%></>
+
+<section id="recipe-details">
+  <div class="details-container">
+    <div class="details-card">
+      <div class="info">
+      <p>Preparation time: <%=@recipe.preparation_time %> </p>
+      <p>Cookin time: <%=@recipe.cooking_time %> </p>
+      <p>Description: <%=@recipe.description %> </p>
+      </div>
+    <p class="switch-text">Public
+    <label class="switch">
+    <% if @recipe.public == true  %>
+    <input type="checkbox" checked>
+    <%end%>
+    <span class="slider round"></span>
+    </label>
+    </p>
+    </div>
+  <div class="detail-links">
+    <%= link_to "Add ingredients",  new_user_recipe_recipe_food_path(recipe_id: @recipe) %>
+    <%= link_to "Generate Shopping List", "#"%>
+  </div>
+</div>
+<table class="recipe-ingredients">
+<th>
+      <p>
+      <strong>Food</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+    <strong>Quantity</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Value</strong>
+      </p>
+    </th>
+    <th>
+      <p>
+      <strong>Actions</strong>
+      </p>
+    </th>
+  <% @recipe_foods.each do |recipe_food| %>
+      <tr>
+      <td>
+      <%=  recipe_food.food.name %>
+      </td>
+      <td>
+      <%= recipe_food.quantity%>
+      </td>
+      <td>
+      $<%= recipe_food.food.price*recipe_food.quantity %>
+      </td>
+
+      <td>
+      <% if can? :manage, @recipe %>
+      <%# Delete recipe food %>
+      <%= button_to "Delete", user_recipe_recipe_food_path(recipe_food.recipe.user, recipe_food.recipe, recipe_food), method: :delete %>
+      
+      <% end %>
+
+      </td>
+      </tr>
+  <% end %>
+</table>
+</section>

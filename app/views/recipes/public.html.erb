@@ -1,0 +1,41 @@
+<%= render 'partials/navigation' %>
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
+
+
+<% if notice%>
+  <h4 class='signin-alert'><%= notice%></h4>
+<%end%>
+<h1 id='title'>PUBLIC RECIPES</h1>
+<section class='recip-list'>
+<% @public_recipes.each do |recipe| %>
+
+  <div class="card">
+ 
+  <div class="container">
+    <section>
+      <h1><b>
+        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+      </b></h1> 
+    </section>
+
+    <section>
+      <p><b>Total Food Item:</b>  <%= recipe.foods.count%></p> 
+
+       <% cost = recipe.foods.map do |recipe_food| %>
+        <% recipe_food.price * recipe_food.quantity %>
+      <% end %>
+      <p><b>Total Price:</b> <%= "$#{cost.sum}" %> </p> 
+      
+    </section>
+  </div>
+ 
+</div>
+<% end %>
+</section>
+
+
+
+
+
+
+ 

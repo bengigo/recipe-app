@@ -1,0 +1,10 @@
+.amounts {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 36px;
+}
+
+#shop-title {
+  text-align: center;
+  margin: 45px;
+}

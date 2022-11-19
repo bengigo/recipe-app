@@ -1,0 +1,34 @@
+#signup-form {
+  margin: auto;
+  margin-top: 3%;
+  width: 311px;
+  border: 1px solid #fff;
+  padding: 33px;
+  border-radius: 14px;
+  box-shadow: 4px 0 22px 3px #608126;
+  background-color: #fff;
+}
+
+#signup-form a {
+  color: #446607;
+  text-decoration: none;
+}
+
+.input-field {
+  padding: 5px;
+  width: 258px;
+  border: none;
+  border-bottom: 2px solid #7aa036a1;
+  margin-bottom: 18px;
+}
+
+.signup-button input {
+  background: #7aa036;
+  border: aliceblue;
+  padding: 12px;
+  margin: 10px 0 59px 0;
+  width: 251px;
+  border-radius: 28px;
+  color: #fff;
+  cursor: pointer;
+}

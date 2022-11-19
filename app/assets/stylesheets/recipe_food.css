@@ -1,0 +1,14 @@
+#new-ingredient {
+  margin-top: 54px;
+}
+
+#ingredient-form {
+  width: 301px;
+  margin: auto;
+  padding: 29px;
+  border-radius: 9px;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 8px 0 rgb(122 160 54 / 87%);
+  background-color: #fff;
+  height: 230px;
+}

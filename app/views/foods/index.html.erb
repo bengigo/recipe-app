@@ -1,0 +1,30 @@
+<%= render 'partials/navigation' %>
+<%= stylesheet_link_tag "food"%> 
+
+<section class='food-content'>
+<div>
+<%= button_to 'Add New Food' , new_user_food_path  , method: :get , class:'new-food'%><br/>
+</div>
+<div class='foods-list'>
+    <table>
+      <tr>
+        <th>Food</th>
+        <th>Measurement_unit</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+      <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.name%></td>
+        <td><%= food.measurement_unit%></td>
+        <td>$<%= food.price%></td>
+        <td><%= button_to 'Delete' , user_food_path(food.user, food.id) , method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
+</div>
+
+</section>
+
+
+  

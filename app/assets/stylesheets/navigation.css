@@ -1,0 +1,42 @@
+/* final deceisons about font-family, font-style, and spacings will be made as group */
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #7aa036;
+  background-color: #7aa036;
+  box-shadow: 13px 2px 4px 1px #7aa036b5;
+}
+
+#logo {
+  font-size: 28px;
+  background-color: #000;
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+}
+
+li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+}
+
+#logo a {
+  color: #fff;
+}
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  margin-right: 54px;
+}
+
+#menu li {
+  margin: 0 10px;
+  font-size: 17px;
+}
