@@ -1,8 +1,11 @@
 class FoodsController < ApplicationController
-  def index
-   @user=current_user
-   @foods=@user.foods.includes(:user)
-  end
+
+    before_action :authenticate_user!
+    
+    def index
+    @user=current_user
+    @foods=@user.foods.includes(:user)
+   end
 
   def new
    @food = Food.new
@@ -21,7 +24,25 @@ class FoodsController < ApplicationController
           end
        end
    end
+
+
+   def destroy
+    @food=Food.find(params[:id])
+    if current_user == @food.user
+        @food.destroy
+    end
+    respond_to do |format|
+        format.html do
+            redirect_to user_foods_path(@food) , notice: 'Food deleted ✅'
+        end
+    end
+   end
+
+
   def food_params
        params.require(:food).permit(:name , :measurement_unit , :price ,:quantity)
   end
 end
+
+
+

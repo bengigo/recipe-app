@@ -1,12 +1,31 @@
 <%= render 'partials/navigation' %>
-<h1>Shoping list</h1>
-<h3>Amount:<%= @foods.length%></h3>
-<% @foods.each do |food| %>
-    <h3><%= food.name%></h3>
-    <h3><%= food.quantity%></h3>
-    <h3>Total: $<%= food.price * food.quantity%></h3>
-<% end %>
 
+<%= stylesheet_link_tag "public_list"%> 
+<h1 id='shop-title'>Shooping list</h1>
+
+<div class='amounts'>
+    <h3>Amount of food items to buy: <%= @foods.count%></h3>
+    
+    <h3>Total Value of food needed: <%= @quantity%></h3>
+</div>
+
+<div class='shop-list'>
+    <table>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+<% @foods.each do |food| %>
+      <tr>
+        <td><%= food.name%></td>
+        <td><%= food.quantity%></td>
+        <td>$<%= food.quantity * food.price%></td>
+      </tr>
+    
+<% end %>
+</table>
+</div>
 
 
 
