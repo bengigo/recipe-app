@@ -7,11 +7,8 @@ class FoodsController < ApplicationController
     @foods=@user.foods.includes(:user)
    end
 
-
-   def show
-    # should show the details (foods) of the recipe
-    @food = Food.find(params[:id])
-   
+  def new
+   @food = Food.new
   end
 
   def create
@@ -23,13 +20,9 @@ class FoodsController < ApplicationController
            redirect_to user_foods_path(current_user.id) , notice: 'Food Add Successfuly'
            else
            render :new  , notice: 'Food can`t Add!'
-
            end
-        end
-      end
-    end
-   def food_params
-        params.require(:food).permit(:name , :measurement_unit , :price ,:quantity)
+          end
+       end
    end
 
 
@@ -45,10 +38,12 @@ class FoodsController < ApplicationController
     end
    end
 
+
   def food_params
        params.require(:food).permit(:name , :measurement_unit , :price ,:quantity)
   end
-
 end
+
+
 
 

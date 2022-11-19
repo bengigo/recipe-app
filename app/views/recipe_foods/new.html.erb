@@ -1,5 +1,4 @@
 <%= render 'partials/navigation' %>
-<%= stylesheet_link_tag "recipe_foods"%>
 
 <%= form_with(url: user_recipe_recipe_foods_path, model: @recipe_food) do |form| %>
   <% if @recipe_food.errors.any? %>
